@@ -3,6 +3,82 @@ erdiagram Model
 notation=default
 
 
+
+
+
+entity USER {
+    id: INT key
+    work_yeer: INT
+    Experience_level: STRING 
+    Employment_type: STRING
+    Job_Titel: STRING
+    Salary: INT
+    Employee_residence: STRING
+    Remote_ratio: INT
+    Company_location: STRING
+    Company_size: CHAR
+}
+
+entity Employee {
+    id: INT key
+    work_yeer: INT 
+    Experience_level: STRING 
+    Employment_type: STRING
+    Job_Titel: STRING
+    Salary: INT
+    Employee_residence: STRING
+    Remote_ratio: INT
+    Company_location: STRING
+    Company_size: CHAR
+}
+
+
+entity Database {
+    id: INT key
+    work_yeer: INT 
+    Experience_level: STRING 
+    Employment_type: STRING
+    Job_Titel: STRING
+    Salary: INT
+    Employee_residence: STRING
+    Remote_ratio: INT
+    Company_location: STRING
+    Company_size: CHAR
+
+}
+
+
+
+entity Estimator {
+    id: INT key
+    Estimate: INT
+
+}
+
+
+relationship Request {
+    USER[1]  -> Estimator[1]
+    points: DOUBLE
+}
+
+relationship Searches {
+    Estimator[1]  -> Database[1]
+    points: DOUBLE
+}
+
+relationship Inserts {
+    Employee[1]  -> Database[1]
+    points: DOUBLE
+}
+
+relationship Salery_Estimate {
+    Estimator[1]  -> USER[1]
+    points: DOUBLE
+}
+
+
+/* 
+
 // Entities
 entity Student {
     id: INT key
@@ -54,4 +130,4 @@ weak relationship include {
 }
 relationship Location {
     Building[N] -> Department[1]
-}
+} */
