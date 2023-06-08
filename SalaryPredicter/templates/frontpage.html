@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Salary Predictor</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+</head>
+<body>
+    <h1>Salary Predictor</h1>
+    <p>Are you employeed at the moment?</p>
+    <div class="button-container">
+        <a href="{{ url_for('index') }}" class="button">I Don't have a job</a> 
+        <a href="{{ url_for('iGotJob') }}" class="button">I have a job</a>
+    </div>
+</body>
+</html>
+<!-- 225; 213; 144 -->
+
